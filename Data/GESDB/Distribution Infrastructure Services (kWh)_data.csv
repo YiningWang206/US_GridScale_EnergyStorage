@@ -1,0 +1,31 @@
+﻿Measure Names,Technology Mid-Type,Measure Values
+Reliability ,Zinc-based battery,0
+Distribution Upgrade Deferral ,Zinc-based battery,40000
+Reliability ,Sodium-based battery,1042.5
+Distribution Upgrade Deferral ,Sodium-based battery,6200.4
+Reliability ,Sensible heat,1200000
+Distribution Upgrade Deferral ,Sensible heat,0
+Reliability ,Pumped hydro storage,0
+Distribution Upgrade Deferral ,Pumped hydro storage,0
+Reliability ,Nickel-based battery,0
+Distribution Upgrade Deferral ,Nickel-based battery,370
+Reliability ,Lithium-ion battery,338612.15
+Distribution Upgrade Deferral ,Lithium-ion battery,78782.9
+Reliability ,Lead-acid battery,3150.18
+Distribution Upgrade Deferral ,Lead-acid battery,427
+Reliability ,Latent heat,0
+Distribution Upgrade Deferral ,Latent heat,0
+Reliability ,Hydrogen storage,0
+Distribution Upgrade Deferral ,Hydrogen storage,0
+Reliability ,Heat thermal storage,0
+Distribution Upgrade Deferral ,Heat thermal storage,0
+Reliability ,Flywheel,0
+Distribution Upgrade Deferral ,Flywheel,550
+Reliability ,Flow battery,907836.8
+Distribution Upgrade Deferral ,Flow battery,880
+Reliability ,Electro-chemical capacitor,0
+Distribution Upgrade Deferral ,Electro-chemical capacitor,0
+Reliability ,Compressed air energy storage,10000
+Distribution Upgrade Deferral ,Compressed air energy storage,0
+Reliability ,Technology Mid-Type Unknown,42718
+Distribution Upgrade Deferral ,Technology Mid-Type Unknown,0
