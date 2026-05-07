@@ -1,19 +1,20 @@
+# US Grid Energy Storage
 This repository analyzes US Grid energy storage projects and state-level energy storage policies. In brief, I wonder **how state ES policies have affected not only the bulk capacity of ES installed, but also what type of ES technology installed**. I will first introduce grid energy storage, different types of ES technology, and why it matters to differentiate these technologies. I will then summarize state-level energy storage policies. I will follow by describing the current status of grid ES projects in US, using EIA 860 form and GESDB data to analyze the trend and types of ES installation, and finally, I will end with a brief discussion of how these state policies have affected ES installation.
 
 Linkage between output figures and python codes:
 - [tech_landscape.py](tech_landscape.py) uses [tech_landscape_manual.csv](Data\tech_landscape_manual.csv) to create:
 	- [Tech_landscape.png](Figures\Tech_landscape.png)
 - [policy.py](policy.py) uses [policy.csv](Data\policy.csv) and [tl_2024_us_state.zip](Data\tl_2024_us_state.zip) to create:
-	- [Policy_map.png]
-- [installation.py] uses all zipfiles under the "Data\EIA\860" folder to create:
-	- [renewable_panel.csv]
-	- [ES_install_trend.png]
-	- [ES_install_sector.png]
-- [map.py] uses [GESDB_Project_Data_full.csv], [renewable_panel.csv], and [tl_2024_us_state.zip] to create: 
-	- [GESDB_Duration.png]
-	- [Installation_map.png]
-	- [Service_heatmap.png]
-	- [Projects_policy_map.png]
+	- [Policy_map.png](Figures\Policy_map.png)
+- [installation.py](installation.py) uses all zipfiles under the "Data\EIA\860" folder to create:
+	- [renewable_panel.csv](Data\renewable_panel.csv)
+	- [ES_install_trend.png](Figures\ES_install_trend.png)
+	- [ES_install_sector.png](Figures\ES_install_sector.png)
+- [map.py](map.py) uses [GESDB_Project_Data_full.csv](Data\GESDB\GESDB_Project_Data_full.csv), [renewable_panel.csv](Data\renewable_panel.csv), and [tl_2024_us_state.zip](Data\tl_2024_us_state.zip) to create: 
+	- [GESDB_Duration.png](Figures\GESDB_Duration.png)
+	- [Installation_map.png](Figures\Installation_map.png)
+	- [Service_heatmap.png](Figures\Service_heatmap.png)
+	- [Projects_policy_map.png](Figures\Projects_policy_map.png)
 ## What is grid energy storage?
 
 The electric grid operates under a delicate balance of electricity supply and demand. Unlike most commodities, electricity cannot be stored in a warehouse. It must be generated and consumed almost simultaneously. This makes real-time coordination between generators and end users essential to keeping the grid stable.
