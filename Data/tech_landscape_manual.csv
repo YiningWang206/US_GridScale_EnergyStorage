@@ -1,0 +1,17 @@
+Technology,Duration_min_hr,Duration_max_hr,Duration_max_display_hr,Extends_beyond,Response_time_s,Representative_Power_MW,TRL,TRL_note,Power_source,Duration_Response_source
+Electro-chemical capacitor,0.01,0.015,0.015,FALSE,0.1,1,9,TRL 9,General literature,DOE Long-Duration Storage Shot Technology Strategy Assessments (2023)
+Flywheel,0.1,4,4,FALSE,1,1,9,TRL 9,IEA-ES Fact Sheet Flywheel (Sept 2024) Beacon Power 20 MW,IEA-ES Fact Sheet Flywheel Energy Storage (Sept 2024)
+Lithium-ion battery,0.25,6,6,FALSE,1,5,9,TRL 6-9 use 9 for commercial,IEA-ES Fact Sheet LIB (Oct 2024) Example 3 5MW/5MWh,IEA-ES Fact Sheet Lithium-Ion Battery (Oct 2024)
+Nickel-based battery,0.25,1.5,1.5,FALSE,0.3,1,9,TRL 9,General literature no IEA-ES fact sheet,JRC (2022) EUR 31220 EN
+Lead-acid battery,0.25,8,8,FALSE,1,1,9,TRL 9,IEA-ES Fact Sheet Lead-Acid (July 2024) grid-scale estimate,IEA-ES Fact Sheet Lead-Acid Battery (July 2024)
+Sodium-based battery,1,6,6,FALSE,1,1,8,TRL 8,IEA-ES Fact Sheet Molten-Salt Battery (Oct 2024) midpoint,IEA-ES Fact Sheet Molten-Salt Battery (Oct 2024)
+Flow battery,2,24,24,FALSE,1,5,8,TRL 8,IEA-ES Fact Sheet Flow Battery (2024) typical grid,IEA-ES Fact Sheet Flow Battery (2024)
+Liquid air energy storage,1,72,72,FALSE,600,50,7,TRL ~7 first commercial plant due 2026,IEA-ES Fact Sheet LAES (July 2024) 50MW/300MWh,IEA-ES Fact Sheet Liquid Air Energy Storage (July 2024)
+Compressed air energy storage,8,8760,100,TRUE,600,50,9,TRL 9 diabatic TRL 5 adiabatic,IEA-ES Fact Sheet CAES (July 2024) 50MW/400MWh example,IEA-ES Fact Sheet Compressed Air Energy Storage (July 2024)
+Pumped hydro storage,4,672,100,TRUE,300,200,9,TRL 9,IEA-ES Fact Sheet PSH (July 2024) new plants >200MW,IEA-ES Fact Sheet Pumped Hydroelectric Energy Storage (July 2024)
+Sensible heat - Solids,1,72,72,FALSE,300,5.7,7,TRL 6-7,IEA-ES Fact Sheet Solid Medium (July 2024) Juelich 5.7MW/12MWh,IEA-ES Fact Sheet Solid Medium Heat Storage (July 2024)
+Sensible heat - Liquid salt,1,24,24,FALSE,300,300,9,TRL 9 CSP TRL 4+ new apps,IEA-ES Fact Sheet Liquid Salt (July 2024) up to 300MW_th,IEA-ES Fact Sheet Liquid Salt Heat Storage (July 2024)
+Latent heat - Low temperature,0.5,48,48,FALSE,300,0.2,6,TRL 4-5 high performance TRL 5-7 high energy,IEA-ES Fact Sheet Latent LT (Nov 2025) 0.22MW upper end,IEA-ES Fact Sheet Low-Temperature Latent Heat Storage (Nov 2025)
+Latent heat - High temperature,1,8,8,FALSE,300,0.7,7,TRL 7,IEA-ES Fact Sheet Latent HT (July 2024) 700kW module,IEA-ES Fact Sheet High-Temperature Latent Heat Storage (July 2024)
+Thermochemical - Sorption,1,4320,100,TRUE,3600,1,6,TRL 5-7,IEA-ES Fact Sheet Sorption (Sept 2025) 1MW upper end,IEA-ES Fact Sheet Thermochemical Heat Storage by Sorption (Sept 2025)
+Thermochemical - Chemical reaction,1,168,100,FALSE,600,0.01,4,TRL 3-4 lab scale,IEA-ES Fact Sheet Chemical Reaction (July 2024) lab scale,IEA-ES Fact Sheet Thermochemical Heat Storage by Chemical Reaction (July 2024)

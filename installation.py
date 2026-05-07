@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 plt.rcParams["figure.dpi"] = 300
 
-data_path = r"C:\Users\Yining Wang\Desktop\Syracuse\2026 Spring\PAI 789 Advance Policy Analysis\US_GridScale_EnergyStorage\Data\EIA\860"
+data_path = "Data/EIA/860"
 
 common_cols = [
     'Utility ID', 'Utility Name', 'Plant Code', 'Plant Name', 
@@ -62,7 +62,7 @@ type_map = {
     "OTH": "Other",
     "PBB": "Lead-acid Battery",
     "NIB": "Nickel-based Battery",
-    "Solar Thermal with Energy Storage": "Solar Thermal",
+    "Solar Thermal with Energy Storage": "Thermal",
     "FLB": "Flow Battery",
     "Natural Gas with Compressed Air Storage": "Compressed Air",
     "Batteries": "Other Battery",
@@ -94,7 +94,7 @@ print(tech_panel)
 tech_new = es_raw[es_raw["Operating Year"] == es_raw["year"]].groupby(
     ["year", "tech_group"])["Nameplate Energy Capacity (MWh)"].sum().reset_index()
 
-tech_pivot = tech_new.pivot(
+tech_pivot = tech_panel.pivot(
     index="year", columns="tech_group", 
     values="Nameplate Energy Capacity (MWh)"
 ).fillna(0)
@@ -139,6 +139,8 @@ re_panel_split = re_panel_split.rename(columns={"Wind": "wind_mw", "Solar": "sol
 panel = panel.drop(columns=["re_capacity_mw"], errors="ignore")
 panel = panel.merge(re_panel_split, on=["State", "year"], how="left").fillna(0)
 
+panel.to_csv("Data/renewable_panel.csv")
+
 #%% Plot ES installation trend, with renewable trend and by type of tech.
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
@@ -170,9 +172,10 @@ ax1.legend(lines1 + lines2, labels1 + labels2, loc="upper left")
 # right, %ES type
 
 color_map = {
+    "Electro-chemical Capacitor": "#2CA02C",
     "Lithium-ion Battery": "#4C72B0",
     "Flywheel": "#DD8452",
-    "Solar Thermal": "#55A868",
+    "Thermal": "#55A868",
     "Compressed Air": "#C44E52",
     "Flow Battery": "#8172B3",
     "Lead-acid Battery": "#937860",
@@ -196,7 +199,7 @@ ax2.set_title("US Grid-Scale Energy Storage\nTechnology Share (2016-2024)")
 ax2.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
 ax2.tick_params(axis='x', rotation=45)
 handles, labels = ax2.get_legend_handles_labels()
-ax2.legend(handles[::-1], labels[::-1], bbox_to_anchor=(1.05, 1), loc="upper left")
+ax2.legend(handles[::-1], labels[::-1], loc="lower right", fontsize=8)
 
 plt.tight_layout()
 plt.show()
@@ -211,10 +214,10 @@ sector_map = {
     "IPP Non-CHP": "IPP",
     "IPP CHP": "IPP",
     "Electric Utility": "Electric Utility",
-    "Commercial Non-CHP": "Commercial/Industrial",
-    "Commercial CHP": "Commercial/Industrial",
-    "Industrial Non-CHP": "Commercial/Industrial",
-    "Industrial CHP": "Commercial/Industrial",
+    "Commercial Non-CHP": "Commercial/\nIndustrial",
+    "Commercial CHP": "Commercial/\nIndustrial",
+    "Industrial Non-CHP": "Commercial/\nIndustrial",
+    "Industrial CHP": "Commercial/\nIndustrial",
 }
 
 es_raw["sector_group"] = es_raw["Sector Name"].map(sector_map)
@@ -259,4 +262,4 @@ ax2.tick_params(axis='x', rotation=0)
 plt.tight_layout()
 plt.show()
 
-fig.savefig("ES_install_sector")
+fig.savefig("ES_install_sector.png")
